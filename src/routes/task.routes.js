@@ -1,7 +1,6 @@
 const express = require('express');
 const route = express.Router();
 
-
 //Controllers
 const taskControllers = require('../controllers/taskController');
 
@@ -12,6 +11,7 @@ route.use(authMiddleware);
 
 route.post('/', taskControllers.addNewTask);
 route.get('/:id', taskControllers.getTasksByUserId);
+route.get('/unique/:id', taskControllers.getTaskById);
 route.put('/:id', taskControllers.updateTaskById);
 route.delete('/:id', taskControllers.deleteTaskById);
 
