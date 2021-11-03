@@ -15,7 +15,6 @@ exports.getTasksByUserId = async (req, res) => {
         const tasks = await Task.find({
             userId: req.params.id
         })
-
         res.status(200).json(tasks)
     } catch (err) {
         res.status(400).json({ error: true, message: err.message})
