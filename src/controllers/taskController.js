@@ -30,8 +30,7 @@ exports.getTaskById = async (req, res) => {
     }
 }
 
-exports.updateTaskById = async (req, res) => {
-    
+exports.updateTaskById = async (req, res) => {    
     try{        
         const task = await Task.find({
             id: req.params.id
@@ -48,7 +47,7 @@ exports.updateTaskById = async (req, res) => {
     }
 }
 
- exports.deleteTaskById = async (req, res) => { 
+exports.deleteTaskById = async (req, res) => { 
     await Task.findByIdAndDelete(req.params.id).then(()=>{
         res.status(200).json({ error: false, message: 'Operation carried out successfully'})
     }).catch((err)=>{

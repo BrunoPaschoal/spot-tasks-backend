@@ -14,6 +14,7 @@ require('./src/database/database');
 //Importando as rotas
 app.use('/auth', require('./src/routes/auth.routes'));
 app.use('/task', require('./src/routes/task.routes'));
+app.use('/project', require('./src/routes/project.routes'));
 
 app.listen(8000, () => {
     console.log("Sever is runing");
