@@ -7,9 +7,9 @@ const Task = mongoose.model('Task', {
         type: Boolean,
         required: true
     },
-    userId:{
+    projectId:{
         type: mongoose.Types.ObjectId,
-        ref: 'User'
+        ref: 'Project'
     },
     taskDetails: {
         type: String,
